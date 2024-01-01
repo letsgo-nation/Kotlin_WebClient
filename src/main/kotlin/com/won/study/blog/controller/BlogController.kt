@@ -14,7 +14,7 @@ class BlogController(
         val blogService: BlogService
 ) {
     @GetMapping("")
-    fun search(@RequestBody blogDto: BlogDto) : String? {
+    fun search(@RequestBody @Valid blogDto: BlogDto) : String? {
         val result = blogService.searchKakao(blogDto)
         return result
     }
