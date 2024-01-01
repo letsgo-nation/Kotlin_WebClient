@@ -11,8 +11,11 @@ import org.springframework.web.reactive.function.client.bodyToMono
 
 @Service
 class BlogService {
+    @Value("\${REST_API_KEY}")
+    lateinit var restApiKey: String
 
     fun searchKakao(blogDto: BlogDto): String? {
+
         val webClient: WebClient = WebClient
                 .builder()
                 .baseUrl("https://dapi.kakao.com")
@@ -26,7 +29,7 @@ class BlogService {
                         .queryParam("page", blogDto.page)
                         .queryParam("size", blogDto.size)
                         .build() }
-                .header("Authorization", "KakaoAK 93d2da970f3cfb2e2cab759c1554afe1")
+                .header("Authorization", "KakaoAK $restApiKey")
                 .retrieve()
                 .bodyToMono<String>()
         val result = response.block()
