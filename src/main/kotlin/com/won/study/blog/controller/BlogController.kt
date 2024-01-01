@@ -1,6 +1,7 @@
 package com.won.study.blog.controller
 
 import com.won.study.blog.dto.BlogDto
+import com.won.study.blog.entity.Wordcount
 import com.won.study.blog.service.BlogService
 import jakarta.validation.Valid
 import org.springframework.web.bind.annotation.GetMapping
@@ -19,4 +20,6 @@ class BlogController(
         return result
     }
 
+    @GetMapping("/rank")
+    fun searchWordRank(): List<Wordcount> = blogService.searchWordRank()
 }

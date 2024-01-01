@@ -7,5 +7,5 @@ import jakarta.persistence.Id
 class Wordcount (
 
         @Id val word: String,
-        val cnt: Int = 0
+        var cnt: Int = 0
 )
