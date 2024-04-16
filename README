@@ -1,4 +1,4 @@
-![image](https://github.com/letsgo-nation/Kotlin_WebClient/assets/131455266/b2bbf692-fc9e-472c-b3c8-ae4054e841d2)1. Service단에 WebClient를 사용하여 카카오 API 호출한다. 
+1. Service단에 WebClient를 사용하여 카카오 API 호출한다. 
 2. 값을 검색할 때 카카오 API를 호출하여 결과값이 잘 전달되는지 확인한다. 
 3. 검색어 빈도수를 Repository에 담아서 인기 있는 검색어 순위를 확인해보는 API를 설계한다.
 
